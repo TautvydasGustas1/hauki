@@ -5,6 +5,9 @@ FROM python:3.7-buster as appbase
 
 RUN useradd -ms /bin/bash -d /hauki hauki
 
+# After deployment tests
+COPY tests /tests
+
 WORKDIR /hauki
 
 # Can be used to inquire about running app
@@ -18,9 +21,6 @@ ENV STATIC_ROOT /srv/static
 # while in Docker. Maybe the buffer is larger?
 ENV PYTHONUNBUFFERED True
 
-
-# After deployment tests
-COPY tests /tests
 
 # less & netcat-openbsd are there for in-container manual debugging
 RUN apt-get update && apt-get install -y postgresql-client less netcat-openbsd gettext locales
