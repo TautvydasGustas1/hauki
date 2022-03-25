@@ -44,6 +44,10 @@ COPY . .
 ENV DEBUG=True
 RUN mkdir -p /srv/static && python manage.py collectstatic
 
+
+# After deployment tests
+ADD tests /tmp/tests/test-database.sh
+
 # Keep media in its own directory outside home, in case home
 # directory forms some sort of attack route
 # Usually this would be some sort of volume
