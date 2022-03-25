@@ -18,6 +18,10 @@ ENV STATIC_ROOT /srv/static
 # while in Docker. Maybe the buffer is larger?
 ENV PYTHONUNBUFFERED True
 
+
+# After deployment tests
+COPY tests /tmp/tests
+
 # less & netcat-openbsd are there for in-container manual debugging
 RUN apt-get update && apt-get install -y postgresql-client less netcat-openbsd gettext locales
 
@@ -45,8 +49,7 @@ ENV DEBUG=True
 RUN mkdir -p /srv/static && python manage.py collectstatic
 
 
-# After deployment tests
-ADD tests /tmp/tests/test-database.sh
+
 
 # Keep media in its own directory outside home, in case home
 # directory forms some sort of attack route
