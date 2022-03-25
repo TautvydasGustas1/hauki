@@ -21,3 +21,4 @@
 !pytest.ini
 !requirements*
 !setup.cfg
+!test-database.sh
