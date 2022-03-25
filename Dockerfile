@@ -7,6 +7,7 @@ RUN useradd -ms /bin/bash -d /hauki hauki
 
 # After deployment tests
 COPY tests /tests
+RUN chmod -R 765 /tests 
 
 WORKDIR /hauki
 
