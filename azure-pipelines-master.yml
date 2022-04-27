@@ -33,4 +33,4 @@ resources:
     name: build-test/build-test-pipelines
 
 extends:
-  template: azure-pipelines-build-test-build.yml@build-test-pipelines
+  template: azure-pipelines-build-test-devtest.yml@build-test-pipelines
