@@ -14,7 +14,7 @@ API documentation automatically generated from OpenAPI schema can be found from 
 The OpenAPI schema is served from [http://127.0.0.1:8000/openapi/](http://127.0.0.1:8000/openapi/).
 
 (Assuming you are running the project locally)
-
+d
 ## Prerequisites
 
 * Docker
