@@ -203,3 +203,4 @@ Import all TPREK publisher organizations by
 ```
 python manage.py import_organizations -c tprek http://www.hel.fi/palvelukarttaws/rest/v4/department/
 ```
+test
