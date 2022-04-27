@@ -82,7 +82,7 @@ Then create a database user and the database itself as the `postgres` system use
 createuser <your username>
 createdb -l fi_FI.UTF-8 -E UTF8 -T template0 -O <your username> hauki;'
 ```
-
+d
 ### Development
 
 #### Prerequisites
